@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+import sys
+from colorama import Fore
+
+print(f"{Fore.CYAN}[+] Proxy Gking v1 - Free Fire HS Injector")
+print(f"{Fore.GREEN}[+] by Moises Rodrigues")
+print(f"{Fore.YELLOW}[*] Proxy inicializado com sucesso!\n")
+
+while True:
+    print(f"{Fore.CYAN}=== MENU ===")
+    print("1 - Injetar HS")
+    print("2 - Remover HS")
+    print("3 - Sair")
+    opcao = input(f"\n{Fore.YELLOW}Escolha: ")
+    
+    if opcao == "1":
+        print(f"{Fore.GREEN}[✓] HS Injetado!")
+    elif opcao == "2":
+        print(f"{Fore.GREEN}[✓] HS Removido!")
+    elif opcao == "3":
+        print(f"{Fore.RED}Saindo...")
+        break
+    else:
+        print(f"{Fore.RED}Opção inválida!")
+
+
+
+

@@ -1,0 +1,13 @@
+{
+  "proxy": {
+    "enabled": false,
+    "host": "localhost",
+    "port": 8080
+  },
+  "injection": {
+    "hs_enabled": false,
+    "speed": 1.0,
+    "damage": 1.0
+  },
+  "app_version": "1.0"
+}

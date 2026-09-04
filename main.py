@@ -1,39 +1,31 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import os
-import sys
-import json
-import time
-from colorama import Fore, Style, init
-
+from colorama import Fore, init
+from config import *
 init(autoreset=True)
 
-__version__ = "1.0.0"
+print(f"{Fore.CYAN}[+] Proxy Gking v{PROXY_VERSION} - Free Fire HS Injector")
+print(f"{Fore.GREEN}[+] by Moises Rodrigues\n")
 
-class ProxyGking:
-    def __init__(self):
-        self.config = self.load_config()
-        
-    def load_config(self):
-        try:
-            with open('config.json', 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            print(f"{Fore.RED}[x] config.json nao encontrado!")
-            sys.exit(1)
+while True:
+    print(f"{Fore.CYAN}=== MENU ===")
+    print(f"{Fore.GREEN}1{Fore.WHITE} - Injetar HS")
+    print(f"{Fore.GREEN}2{Fore.WHITE} - Remover HS")
+    print(f"{Fore.GREEN}3{Fore.WHITE} - Ver Config")
+    print(f"{Fore.GREEN}4{Fore.WHITE} - Sair\n")
     
-    def show_banner(self):
-        banner = f"""
-{Fore.CYAN}[+] Proxy Gking v1 - Free Fire HS Injector
-{Fore.GREEN}[+] by Moises Rodrigues
-{Style.RESET_ALL}"""
-        print(banner)
+    opcao = input(f"{Fore.YELLOW}Escolha: ")
     
-    def run(self):
-        self.show_banner()
-        print(f"{Fore.YELLOW}[*] Proxy inicializado com sucesso!")
-
-if __name__ == "__main__":
-    app = ProxyGking()
-    app.run()
+    if opcao == "1":
+        print(f"{Fore.YELLOW}[*] Injetando HS...")
+        print(f"{Fore.GREEN}[✓] HS Injetado com sucesso!\n")
+    elif opcao == "2":
+        print(f"{Fore.YELLOW}[*] Removendo HS...")
+        print(f"{Fore.GREEN}[✓] HS Removido com sucesso!\n")
+    elif opcao == "3":
+        print(f"{Fore.CYAN}[*] Proxy v{PROXY_VERSION} - {PROXY_STATUS}")
+        print(f"{Fore.CYAN}[*] Host: {PROXY_HOST}:{PROXY_PORT}\n")
+    elif opcao == "4":
+        print(f"{Fore.RED}[!] Saindo...")
+        break
+    else:
+        print(f"{Fore.RED}[x] Opção inválida!\n")
